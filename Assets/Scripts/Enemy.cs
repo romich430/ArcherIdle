@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.position += Vector3.left * Time.deltaTime;
+        transform.position += Vector3.left * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D col)

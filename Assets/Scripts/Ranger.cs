@@ -22,8 +22,8 @@ public class Ranger : MonoBehaviour
 
     private IEnumerator Shoot(Enemy target)
     {
-        animator.SetTrigger("Attack");
-        yield return new WaitForSeconds(0.45f);
+        animator.SetTrigger("Attack"); 
+        yield return new WaitForSeconds(0.45f); //костиль, щоб не витрачати час
         Arrow instance = Instantiate(arrow, firepoint.position, Quaternion.identity);
         instance.Shoot(target);
     }
